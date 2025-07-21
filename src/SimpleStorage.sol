@@ -10,7 +10,7 @@ contract SimpleStorage {
     uint256 myFavoriteNumber; // 0
 
     // uint256[] listOfFavoriteNumber;
-    struct Person{
+    struct Person {
         uint256 favoriteNumber;
         string name;
     }
@@ -32,11 +32,8 @@ contract SimpleStorage {
     }
 
     // calldata, memory, storage
-    function addPerson(string memory _name, uint256 _favoriteNumber) public{
+    function addPerson(string memory _name, uint256 _favoriteNumber) public {
         listOfPeople.push(Person(_favoriteNumber, _name));
         nameToFavoriteNumber[_name] = _favoriteNumber;
     }
 }
-
-
-
